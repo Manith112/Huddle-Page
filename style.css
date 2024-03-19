@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --Violet: hsl(257, 40%, 49%);
+--Soft-Magenta: hsl(300, 69%, 71%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    padding: 60px;
+    background-image: url(./huddle-landing-page-with-single-introductory-section-master/images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--Violet);
+}
+.logo{
+   
+    width: 150px;
+}
+.container{
+    gap: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: fade-in-up 2s ease forwards;
+}
+.container > .text > h1{
+    color: white;
+    font-size: 40px;
+}
+
+.text > p{
+    color: whitesmoke;
+    font-weight: 300;
+    padding: 30px 0;
+}
+.text > button{
+    background-color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 60px;
+    color: var(--Violet);
+    box-shadow: 10px 23px 15px 8px rgba(0,0,0,0.1);
+}
+.text > button:hover{
+    background-color: var(--Soft-Magenta);
+    color: white;
+    cursor: pointer;
+    
+}
+.icons{
+    display: flex;
+    gap: 10px;
+    float: right;
+    
+}
+.each {
+    padding: 6px 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+.each > .fa-brands{
+    color: white;
+    cursor: pointer;
+}
+.each:hover{
+    border: 1px solid var(--Soft-Magenta);
+}
+.each > .fa-facebook-f:hover , .each > .fa-twitter:hover, .each > .fa-instagram:hover{
+    color: var(--Soft-Magenta); 
+}
+@keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(50px); /* Move element down 50px */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Move element to its original position */
+    }
+  }
+@media screen and (max-width: 1000px){
+    .container{
+       flex-direction: column;
+    }
+    .text{
+        text-align: center;
+    }
+    .icons{
+        /* margin-top: 0px; */
+        float: unset;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        /* margin: auto; */
+    }
+    .container > .image {
+        width: 400px;
+    }
+}
+@media screen and (max-width: 600px){
+    .container > .text > h1{
+        font-size: 30px;
+    }
+    body{
+        padding: 60px 30px 60px 30px;
+        background-image: url(./huddle-landing-page-with-single-introductory-section-master/images/bg-mobile.svg);
+        background-size: contain;
+    }
+}
+@media screen and (max-width: 430px){
+    .container > .image {
+        width: 300px;
+    }
+    .container > .text > h1{
+        font-size: 20px;
+    }
+}
